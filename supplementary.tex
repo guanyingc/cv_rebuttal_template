@@ -1,4 +1,8 @@
 % Requires cvpr.sty, cvpr_eso.sty eso-pic.sty, everyshi.sty ieee_fullname.bst
+
+%% You can choose to use two-column or single-column layout
+%% Please update ConfName, ConfYear, PaperID accordingly
+
 \documentclass[10pt,letterpaper]{article}
 %\documentclass[10pt,letterpaper,twocolumn]{article} % Use two column 
 
@@ -56,15 +60,15 @@
 %\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,hidelinks]{hyperref}
 %\usepackage[hidelinks]{hyperref}
 
-%\cvprfinalcopy  %*** Uncomment this line for the final submission
+%\camerareadycopy  %*** Uncomment this line for the final submission
 
 \def\confName{CVPR\xspace} % *** Enter the Conference Name
-\def\confYear{2022\xspace} % *** Enter the 
-\def\cvprPaperID{8888} % *** Enter the CVPR Paper ID here
+\def\confYear{2022\xspace} % *** Enter conference Year 
+\def\PaperID{8888} % *** Enter the CVPR Paper ID here
 \def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
 
 % Pages are numbered in submission mode, and unnumbered in camera-ready
-%\ifcvprfinal\pagestyle{empty}\fi
+%\ifcameraready\pagestyle{empty}\fi
 \begin{document}
 
 %%%%%%%%% TITLE
@@ -77,6 +81,32 @@
     \hypersetup{linkcolor=black}
     \tableofcontents
 }
+
+\vspace{2cm}
+\section{README}
+
+\begin{itemize}
+    \item You can choose to use two-column or single-column layout.
+\begin{verbatim}
+    \documentclass[10pt,letterpaper]{article} % Single column
+    \documentclass[10pt,letterpaper,twocolum]{article} % Two column
+\end{verbatim}
+
+    \item Please update the ConfName, ConfYear, and PaperID accordingly.
+\begin{verbatim}
+    \def\confName{CVPR\xspace} % *** Enter the Conference Name
+    \def\confYear{2022\xspace} % *** Enter the conference Year
+    \def\PaperID{8888} % *** Enter the CVPR Paper ID here
+\end{verbatim}
+    
+    \item Switch to the camera ready version to remove rulers and show authors.
+\begin{verbatim}
+    %\camerareadycopy  %*** Uncomment this line for the final submission
+\end{verbatim}
+\end{itemize}
+
+
+
 
 \clearpage
 

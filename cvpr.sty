@@ -31,7 +31,7 @@
 % with both versions:
 % ===================
 %
-% specify \cvprfinalcopy to emit the final camera-ready copy
+% specify \camerareadycopy to emit the final camera-ready copy
 %
 % specify references as
 %   \bibliographystyle{ieee}
@@ -67,9 +67,9 @@
 \setlength{\oddsidemargin}{-.304in}
 \setlength{\evensidemargin}{-.304in}
 
-\newif\ifcvprfinal
-\cvprfinalfalse
-\def\cvprfinalcopy{\global\cvprfinaltrue}
+\newif\ifcameraready
+\camerareadyfalse
+\def\camerareadycopy{\global\camerareadytrue}
 
 % memento from size10.clo
 % \normalsize{\@setfontsize\normalsize\@xpt\@xiipt}
@@ -96,9 +96,9 @@
       \large
       \lineskip .5em
       \begin{tabular}[t]{c}
-         \ifcvprfinal\@author\else Anonymous \confName submission\\
+         \ifcameraready\@author\else Anonymous \confName submission\\
          \vspace*{1pt}\\%This space will need to be here in the final copy, so don't squeeze it out for the review copy.
-Paper ID \cvprPaperID \fi
+Paper ID \PaperID \fi
       \end{tabular}
       \par
       }
@@ -193,7 +193,7 @@ Paper ID \cvprPaperID \fi
 % \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
 \def\cvprruler#1{\makevruler[12pt][#1][1][3][0.993\textheight]\usebox{\cvprrulerbox}}
 \AddToShipoutPicture{%
-\ifcvprfinal\else
+\ifcameraready\else
   %\AtTextLowerLeft{%
   % \color[gray]{.15}\framebox(\LenToUnit{\textwidth},\LenToUnit{\textheight}){}
   %}
@@ -206,14 +206,14 @@ Paper ID \cvprPaperID \fi
     \put(\LenToUnit{\textwidth\kern 30pt},\LenToUnit{-\cvprruleroffset}){%right ruler
       \cvprruler{\cvprrulercount}}
   }
-\def\pid{\parbox{1in}{\begin{center}\bf\sf{\small \confName}\\\#\cvprPaperID\end{center}}}
+\def\pid{\parbox{1in}{\begin{center}\bf\sf{\small \confName}\\\#\PaperID\end{center}}}
   \AtTextUpperLeft{%paperID in corners
     \put(\LenToUnit{-65pt},\LenToUnit{45pt}){\pid}
     \put(\LenToUnit{\textwidth\kern-8pt},\LenToUnit{45pt}){\pid}
   }
   \AtTextUpperLeft{%confidential
     \put(0,\LenToUnit{1cm}){\parbox{\textwidth}{\centering\cvprtenhv
-       \confName \confYear Submission \#\cvprPaperID. CONFIDENTIAL REVIEW COPY.  DO NOT DISTRIBUTE.}}
+       \confName \confYear Submission \#\PaperID. CONFIDENTIAL REVIEW COPY.  DO NOT DISTRIBUTE.}}
   }
 \fi
 }
