@@ -1,4 +1,4 @@
-% Requires cvpr.sty, cvpr_eso.sty eso-pic.sty, everyshi.sty ieee_fullname.bst
+% Requires cvpr.sty, ieee_fullname.bst
 
 %% You can choose to use two-column or single-column layout
 %% Please update ConfName, ConfYear, PaperID accordingly
@@ -6,7 +6,10 @@
 \documentclass[10pt,letterpaper]{article}
 %\documentclass[10pt,letterpaper,twocolumn]{article} % Use two column 
 
-\usepackage{cvpr}
+\usepackage[review]{cvpr}      % To produce the REVIEW version
+%\usepackage{cvpr}              % To produce the CAMERA-READY version
+%\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
 \usepackage{times}
 \usepackage{epsfig}
 \usepackage{graphicx}
@@ -50,20 +53,31 @@
 %\renewcommand{\paragraph}[1]{\vspace{0.2em}\noindent \textbf{#1 \hspace{0.2em}}}
 \newcommand{\todo}[1]{\textcolor{red}{{[TODO: #1]}}}
 
+% It is strongly recommended to use hyperref, especially for the review version.
+% hyperref with option pagebackref eases the reviewers' job.
+% Please disable hyperref *only* if you encounter grave issues, e.g. with the
+% file validation for the camera-ready version.
+%
+% If you comment hyperref and then uncomment it, you should delete
+% ReviewTempalte.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you
+%  should be clear).
+\usepackage[pagebackref,breaklinks,colorlinks]{hyperref}
+
+%\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,colorlinks]{hyperref}
 % Variables
 % Include other packages here, before hyperref.
 
 % If you comment hyperref and then uncomment it, you should delete
 % egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
 % run, let it finish, and you should be clear).
-\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,colorlinks]{hyperref}
 %\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,hidelinks]{hyperref}
 %\usepackage[hidelinks]{hyperref}
 
 %\camerareadycopy  %*** Uncomment this line for the final submission
 
 \def\confName{CVPR\xspace} % *** Enter the Conference Name
-\def\confYear{2022\xspace} % *** Enter conference Year 
+\def\confYear{2023\xspace} % *** Enter conference Year 
 \def\PaperID{8888} % *** Enter the CVPR Paper ID here
 \def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
 
@@ -77,32 +91,39 @@
 \author{ABC}
 \maketitle
 
-{
-    \hypersetup{linkcolor=black}
-    \tableofcontents
-}
+%{
+%    \hypersetup{linkcolor=black}
+%    \tableofcontents
+%}
 
 \vspace{2cm}
 \section{README}
 
 \begin{itemize}
     \item You can choose to use two-column or single-column layout.
+{\small
 \begin{verbatim}
-    \documentclass[10pt,letterpaper]{article} % Single column
-    \documentclass[10pt,letterpaper,twocolum]{article} % Two column
+\documentclass[10pt,letterpaper]{article} % Single column
+\documentclass[10pt,letterpaper,twocolum]{article} % Two column
 \end{verbatim}
+        }
 
     \item Please update the ConfName, ConfYear, and PaperID accordingly.
+{\small
 \begin{verbatim}
-    \def\confName{CVPR\xspace} % *** Enter the Conference Name
-    \def\confYear{2022\xspace} % *** Enter the conference Year
-    \def\PaperID{8888} % *** Enter the CVPR Paper ID here
+\def\confName{CVPR\xspace} % *** Enter the Conference Name
+\def\confYear{2022\xspace} % *** Enter the conference Year
+\def\PaperID{8888} % *** Enter the CVPR Paper ID here
 \end{verbatim}
-    
-    \item Switch to the camera ready version to remove rulers and show authors.
+        }    
+    \item Switch between ``review'', ``camera ready'', and ``arxiv'' versions.
+{\small
 \begin{verbatim}
-    %\camerareadycopy  %*** Uncomment this line for the final submission
+\usepackage[review]{cvpr}      % To produce the REVIEW version
+%\usepackage{cvpr}              % To produce the CAMERA-READY version
+%\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
 \end{verbatim}
+        }
 \end{itemize}
 
 
