@@ -1,0 +1,115 @@
+% Requires cvpr.sty, cvpr_eso.sty eso-pic.sty, everyshi.sty ieee_fullname.bst
+\documentclass[10pt,letterpaper]{article}
+%\documentclass[10pt,letterpaper,twocolumn]{article} % Use two column 
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb} % for \degree
+\usepackage{float}
+
+% For table layout
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{makecell}
+
+
+% Setup caption
+\usepackage[labelsep=period]{caption}
+\captionsetup{font=small}
+\RequirePackage{enumitem}
+\setlist[itemize]{nosep}
+\captionsetup[table]{aboveskip=3pt}
+\captionsetup[table]{belowskip=2pt}
+\captionsetup[figure]{aboveskip=5pt}
+\captionsetup[figure]{belowskip=0pt}
+
+% Reference commands
+\newcommand{\Tref}[1]{Table~\ref{#1}}
+\newcommand{\eref}[1]{Eq.~\eqref{#1}}
+\newcommand{\Eref}[1]{Equation~\eqref{#1}}
+\newcommand{\fref}[1]{Fig.~\ref{#1}}
+\newcommand{\Fref}[1]{Figure~\ref{#1}}
+\newcommand{\sref}[1]{Sec.~\ref{#1}}
+\newcommand{\Sref}[1]{Section~\ref{#1}}
+
+\renewcommand{\thetable}{S\arabic{table}} % Rename Fig. 1 to Fig. S1, Table 1 to Table S1
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+
+% Define Macro Here 
+%\renewcommand{\paragraph}[1]{\vspace{0.2em}\noindent \textbf{#1 \hspace{0.2em}}}
+\newcommand{\todo}[1]{\textcolor{red}{{[TODO: #1]}}}
+
+% Variables
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,colorlinks]{hyperref}
+%\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,bookmarks=false,hidelinks]{hyperref}
+%\usepackage[hidelinks]{hyperref}
+
+%\cvprfinalcopy  %*** Uncomment this line for the final submission
+
+\def\confName{CVPR\xspace} % *** Enter the Conference Name
+\def\confYear{2022\xspace} % *** Enter the 
+\def\cvprPaperID{8888} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+%\ifcvprfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Supplementary Material for \\ ``Put The Title of Your Paper Here''}
+
+\author{ABC}
+\maketitle
+
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+}
+
+\clearpage
+
+\section{More Details for the Method}
+\begin{figure}[h] \centering
+    \includegraphics[width=\textwidth,height=0.4\textwidth]{example-image}
+    \caption{Image 1.} \label{fig:}
+\end{figure}
+
+\begin{table}[h]\centering
+    \caption{A simple table with a header row.}
+    \label{tab:table1}
+    \resizebox{0.48\textwidth}{!}{
+    \large
+    \begin{tabular}{*{10}{c}}
+        \toprule
+       Data & Size &  2-Exp & 3-Exp &  4-Exp & 5-Exp &  6-Exp &  7-Exp \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        B & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        Ours & $4096\times 2168$ & 2 & 3 & 4 & 6 & 5 & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+\section{More Details for the Dataset}
+
+\section{More Results}
+
+\pagebreak
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{ref}
+}
+\end{document}
