@@ -1,0 +1,149 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[rebuttal]{cvpr}
+
+% Include other packages here, before hyperref.
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+\usepackage{lipsum} % Just for generating dummy text, can be removed
+\usepackage{blindtext}
+
+\usepackage[labelsep=period]{caption}
+\captionsetup{font=small}
+\captionsetup[table]{aboveskip=0pt}
+\captionsetup[table]{belowskip=0pt}
+\captionsetup[figure]{aboveskip=2pt}
+\captionsetup[figure]{belowskip=0pt}
+
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref,breaklinks,colorlinks,bookmarks=false]{hyperref}
+
+% Support for easy cross-referencing
+\usepackage[capitalize]{cleveref}
+\crefname{section}{Sec.}{Secs.}
+\Crefname{section}{Section}{Sections}
+\Crefname{table}{Table}{Tables}
+\crefname{table}{Tab.}{Tabs.}
+
+\newcommand{\toreviewer}[1]{\vspace{0.4em}\noindent \textcolor{blue}{\textbf{#1 \hspace{0.2em}}}}
+\newcommand{\issue}[1]{\vspace{0.1em}\noindent \textbf{#1 \hspace{0.2em}}}
+% If you wish to avoid re-using figure, table, and equation numbers from
+% the main paper, please uncomment the following and change the numbers
+% appropriately.
+%\setcounter{figure}{2}
+%\setcounter{table}{1}
+%\setcounter{equation}{2}
+
+% If you wish to avoid re-using reference numbers from the main paper,
+% please uncomment the following and change the counter for `enumiv' to
+% the number of references you have in the main paper (here, 6).
+%\let\oldthebibliography=\thebibliography
+%\let\oldendthebibliography=\endthebibliography
+%\renewenvironment{thebibliography}[1]{%
+%     \oldthebibliography{#1}%
+%     \setcounter{enumiv}{6}%
+%}{\oldendthebibliography}
+
+
+% Variables
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\PaperID{8888} % *** Enter the CVPR Paper ID here
+\def\confName{CVPR}
+\def\confYear{2023}
+
+\begin{document}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{The Title of Your Paper}
+
+\maketitle
+
+\thispagestyle{empty}
+\appendix
+
+%%%%%%%%% BODY TEXT - ENTER YOUR RESPONSE BELOW
+\begin{table}[t]
+\centering
+\caption{Table 1.}
+\label{tab:table}
+    \resizebox{0.48\textwidth}{!}{
+    \large
+    \begin{tabular}{*{10}{c}}
+        \toprule
+       Data & Size &  2-Exp & 3-Exp &  4-Exp & 5-Exp &  6-Exp &  7-Exp \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        B & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        Ours & $4096\times 2168$ & 2 & 3 & 4 & 6 & 5 & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+    \vspace{-1em}
+\end{table}
+
+We thank all three reviewers for their constructive comments and appreciations of our strengths such as `the propose method is novel' (\textbf{R3}), `the ablation study is convincing' (\textbf{R2}), and `the method is state-of-the-art' (\textbf{R1}), and `the paper is well written' (\textbf{R3}).
+
+\toreviewer{To Reviewer 1 \& 3:}
+
+\issue{Novelty} 
+\lipsum[1]
+
+\toreviewer{To Reviewer 1:}
+
+\issue{Comparison with existing methods} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Discussion for part A}In hac habitasse platea dictumst. Pellen-esque non elit. Fusce sed justo eu urna porta tincidunt Mauris felis odio, sollicitudin sed, volutpat a.
+
+\issue{Discussion for part B}In hac habitasse platea dictumst. Pellen-esque non elit. Fusce sed justo eu urna porta tincidunt Mauris felis odio, sollicitudin sed, volutpat a.
+
+\toreviewer{To Reviewer 2:}
+
+\issue{Missing details for the dataset} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Missing details for the method A} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Missing details for the method B} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Comparison with method C} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Comparison with method D} 
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. 
+
+\issue{Missing references} 
+We will include them. 
+
+\begin{figure}[tb] \centering
+    \includegraphics[width=0.48\textwidth,height=0.20\textwidth]{example-image}
+    \caption{Image 1.} \label{fig:img1}
+    \vspace{-1em}
+\end{figure}
+
+\toreviewer{To Reviewer 3:}
+
+\issue{Failure case} 
+\lipsum[5]
+
+\issue{Visualization of the method} 
+\lipsum[6]
+
+\issue{Evaluation details}
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan.
+
+\issue{Evaluation setup}
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit.
+
+%\issue{Typos} 
+%We will fix them in the revision.
+
+\end{document}
+
