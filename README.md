@@ -18,5 +18,12 @@ This template answers each question one by one, and refers to the corresponding 
     <img src='samples/egrebuttal2.jpg' width="800">
 </p>
 
+## Example 3
+Recent template.
+
+<p align="center">
+    <img src='samples/egrebuttal3.jpg' width="800">
+</p>
+
 ## More LaTeX Resources
 - [latex_paper_writing_tips](https://github.com/guanyingc/latex_paper_writing_tips)

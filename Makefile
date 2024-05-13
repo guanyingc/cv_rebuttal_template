@@ -1,4 +1,4 @@
-src = egrebuttal
+src = egrebuttal3
 #default language: English, compile with pdflatex 
 pdf:
 	pdflatex $(src).tex
