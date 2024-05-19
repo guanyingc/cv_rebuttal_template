@@ -9,6 +9,7 @@
 
 \usepackage{lipsum} % Just for generating dummy text, can be removed
 \usepackage{blindtext}
+\usepackage{wrapfig}
 
 \usepackage[labelsep=period]{caption}
 \captionsetup{font=small}
@@ -117,8 +118,17 @@ We will include them.
     \vspace{-1em}
 \end{figure}
 
+\begin{wrapfigure}{r}{0.18\textwidth} 
+    \vspace{-1.0em}
+    \centering
+    \includegraphics[width=0.18\textwidth,height=0.15\textwidth]{example-image}
+    \captionof{figure}{Wrapfigure example.}
+    \label{tab:geo}
+    \vspace{-1.1em}
+\end{wrapfigure}
 \Rthree: \textbf{Failure case.}
-\lipsum[5]
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula. hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan. risus eget odio. In hac habitasse platea dictumst. Pellen-esque non elit. Fusce sed justo eu urna porta tincidunt Mauris felis odio, sollicitudin sed, volutpat a, ornare ac. Fusce sed justo eu urna porta tincidunt Mauris felis odio, sollicitudin sed, volutpat a, ornare ac.Fusce sed justo eu urna porta tincidunt Mauris felis odio.
+
 
 \Rthree: \textbf{Visualization of the method.}
 \lipsum[6]
